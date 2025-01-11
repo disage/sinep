@@ -6,7 +6,7 @@
         <div class="row">
             <div class="hero-section_info">
                 <h1>Добро пожаловать в <br> SINEP Group !</h1>
-                <span class="hero-section_info-description">Мы агентство, которое строит цифровое будущее  d бизнеса!</span>
+                <span class="hero-section_info-description">Мы агентство, которое строит цифровое будущее бизнеса!</span>
                 <div class="hero-section_statistics">
                     <div class="hero-section_statistics-item">
                         <img src="@/assets/images/projects_icon.png" alt="projects_icon">

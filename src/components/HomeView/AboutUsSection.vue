@@ -9,11 +9,7 @@
             <div class="about-section_info-description">
                 <div class="about-section_info-description-item">
                     <div class="vertical-divider"></div>
-                    <span>Cоздавать веб-решения, которые делают ваш бизнес сильнее, заметнее и успешнее</span>
-                </div>
-                <div class="about-section_info-description-item">
-                    <div class="vertical-divider"></div>
-                    <span>В мире, где цифровая трансформация становится не просто выбором, а необходимостью, Sinep становится вашим надёжным партнёром на пути к успеху</span>
+                    <span>Cоздавать веб-решения, которые делают ваш бизнес сильнее, заметнее и успешнее в мире, где цифровая трансформация становится не просто выбором, а необходимостью, Sinep становится вашим надёжным партнёром на пути к успеху</span>
                 </div>
             </div>
         </div>

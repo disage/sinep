@@ -46,15 +46,17 @@
         font-size: 20px;
     }
     .services-list {
-        padding: 50px;
-        margin-top: 50px;
         background: #1B1B1C;
-        box-shadow: -5px 5px 10px rgba(14, 14, 14, 0.2), 5px -5px 10px rgba(14, 14, 14, 0.2), -5px -5px 10px rgba(41, 41, 42, 0.9), 5px 5px 13px rgba(14, 14, 14, 0.9), inset 1px 1px 2px rgba(41, 41, 42, 0.3), inset -1px -1px 2px rgba(14, 14, 14, 0.5);
         border-radius: 15px;
+        box-shadow: -5px 5px 10px rgba(14, 14, 14, 0.2), 5px -5px 10px rgba(14, 14, 14, 0.2), -5px -5px 10px rgba(41, 41, 42, 0.9), 5px 5px 13px rgba(14, 14, 14, 0.9), inset 1px 1px 2px rgba(41, 41, 42, 0.3), inset -1px -1px 2px rgba(14, 14, 14, 0.5);
         display: flex;
-        justify-content: center;
         flex-wrap: wrap;
         gap: 100px 30px;
+        justify-content: center;
+        margin-top: 50px;
+        margin: auto;
+        max-width: 1440px;
+        padding: 50px;
         &_item {
             display: flex;
             flex-direction: column;

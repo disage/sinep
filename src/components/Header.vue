@@ -1,0 +1,198 @@
+  
+  <script>
+  import { ref } from "vue";
+  
+  export default {
+    setup() {
+      const isMenuOpen = ref(false);
+  
+      const toggleMenu = () => {
+        isMenuOpen.value = !isMenuOpen.value;
+      };
+  
+      return { isMenuOpen, toggleMenu };
+    },
+  };
+  </script>
+
+<template>
+    <header class="header">
+        <div class="header-content">
+            <div class="header-navigations">
+                <img class="header__logo" src="../assets/images/mini_logo.png"/>
+                <nav class="header__nav">
+                    <a href="#home" class="header__link">Про нас</a>
+                    <a href="#about" class="header__link">Услуги</a>
+                    <a href="#services" class="header__link">Кейсы</a>
+                    <a href="#portfolio" class="header__link">Услуги</a>
+                    <a href="#contact" class="header__link">Контакты</a>
+                </nav>
+            </div>
+            <div class="header__controls">
+                <div class="dropdown">
+                <button class="dropdown__button">RU</button>
+                <ul class="dropdown__menu">
+                    <li class="dropdown__item">UA</li>
+                    <li class="dropdown__item">EN</li>
+                    <li class="dropdown__item">DE</li>
+                </ul>
+                </div>
+                <div class="hamburger_wrapper">
+                    <button class="hamburger" @click="toggleMenu">
+                        <span class="hamburger__line" :class="{ 'hamburger__line--top': isMenuOpen }"></span>
+                        <span class="hamburger__line" :class="{ 'hamburger__line--middle': isMenuOpen }"></span>
+                        <span class="hamburger__line" :class="{ 'hamburger__line--bottom': isMenuOpen }"></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+  </template>
+
+
+<style lang="scss" scoped>
+$background-color: #181819;
+$text-color: #EEEAE6;
+
+.header-content {
+    width: 100%;
+    max-width: 1920px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header {
+
+background: #181819;
+box-shadow: -5px 5px 10px rgba(17, 17, 17, 0.2), 5px -5px 10px rgba(17, 17, 17, 0.2), -5px -5px 10px rgba(31, 31, 33, 0.9), 5px 5px 13px rgba(17, 17, 17, 0.9), inset 1px 1px 2px rgba(31, 31, 33, 0.3), inset -1px -1px 2px rgba(17, 17, 17, 0.5);
+
+  position: fixed;
+  width: 100vw;
+  box-sizing: border-box;
+  display: flex;
+  padding: 0.5rem 2rem;
+  background-color: $background-color;
+  &__logo {
+      margin-right: 20px;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 1rem;
+
+    .header__link {
+      text-decoration: none;
+      color: #BEBEBE;
+      font-size: 1rem;
+      transition: color 0.3s;
+      &:hover {
+          color: #EEEAE6;
+      }
+    }
+  }
+  &-navigations {
+      display: flex;
+      align-items: center;
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    .dropdown {
+      position: relative;
+
+      &__button {
+        background-color: $background-color;
+        color: $text-color;
+        border: none;
+        padding: 11px 16px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
+        cursor: pointer;
+      }
+
+      &__menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $background-color;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem 0;
+
+        .dropdown__item {
+          padding: 0.5rem 1rem;
+          color: $text-color;
+          cursor: pointer;
+        }
+      }
+
+      &:hover .dropdown__menu {
+        display: block;
+      }
+    }
+
+    .hamburger_wrapper {
+        background-color: $background-color;
+        padding: 9px 16px;
+        border-radius: 8px;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
+    }
+
+    .hamburger {
+        align-items: center;
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 20px;
+        justify-content: space-between;
+        padding: 0;
+        position: relative;
+        width: 20px;
+        z-index: 10;
+    
+        .hamburger__line {
+          width: 100%;
+          height: 2px;
+          background-color: #eeeae6;
+          border-radius: 10px;
+          transition: transform 0.3s ease, opacity 0.3s ease;
+      
+          &:nth-child(1) {
+            transform-origin: top left;
+          }
+      
+          &:nth-child(2) {
+            transition: opacity 0.3s ease;
+          }
+      
+          &:nth-child(3) {
+            transform-origin: bottom left;
+          }
+      
+          // Открытое состояние
+          &.hamburger__line--top {
+            transform: rotate(45deg) translate(2px, 2px);
+          }
+      
+          &.hamburger__line--middle {
+            opacity: 0;
+          }
+      
+          &.hamburger__line--bottom {
+            transform: rotate(-45deg) translate(2px, -2px);
+          }
+        }
+      }
+      
+  }
+}
+
+</style>

@@ -2,8 +2,10 @@
 import HeroSection from '../components/HomeView/HeroSection.vue'
 import AboutUsSection from '../components/HomeView/AboutUsSection.vue'
 import AboutServicesSection from '../components/HomeView/AboutServicesSection.vue'
+import WhyWeSection from '../components/HomeView/WhyWeSection.vue'
+import OurServicesSection from '@/components/HomeView/OurServicesSection.vue'
+import CasesSection from '@/components/HomeView/CasesSection.vue'
 import Divider from '../components/Divider.vue'
-
 </script>
 
 <template>
@@ -14,6 +16,11 @@ import Divider from '../components/Divider.vue'
     <Divider/>
     <AboutServicesSection/>
     <Divider/>
+    <WhyWeSection/>
+    <Divider/>
+    <OurServicesSection/>
+    <Divider/>
+    <CasesSection/>
   </main>
 </template>
 
