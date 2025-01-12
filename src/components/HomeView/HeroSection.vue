@@ -10,13 +10,18 @@
                 <div class="hero-section_statistics">
                     <div class="hero-section_statistics-item">
                         <img src="@/assets/images/projects_icon.png" alt="projects_icon">
-                        <span class="hero-section_statistics-item-name">Проектов</span>
-                        <span class="hero-section_statistics-item-count">11</span>
+                        <span class="hero-section_statistics-item-name">Ниш</span>
+                        <span class="hero-section_statistics-item-count">80+</span>
+                    </div>
+                    <div class="hero-section_statistics-item">
+                        <img src="@/assets/images/projects_icon.png" alt="projects_icon">
+                        <span class="hero-section_statistics-item-name">Крупных проектов</span>
+                        <span class="hero-section_statistics-item-count">12+</span>
                     </div>
                     <div class="hero-section_statistics-item">
                         <img src="@/assets/images/projects_icon.png" alt="projects_icon">
                         <span class="hero-section_statistics-item-name">Заработано клиентам</span>
-                        <span class="hero-section_statistics-item-count">10к $</span>
+                        <span class="hero-section_statistics-item-count">70к $</span>
                     </div>
                 </div>
                 <div class="hero-section_clients">

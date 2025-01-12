@@ -53,8 +53,7 @@
         flex-wrap: wrap;
         gap: 100px 30px;
         justify-content: center;
-        margin-top: 50px;
-        margin: auto;
+        margin: 50px auto;
         max-width: 1440px;
         padding: 50px;
         &_item {

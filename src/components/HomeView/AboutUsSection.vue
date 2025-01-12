@@ -5,11 +5,11 @@
     <section class="about-section">
         <div class="about-section_image"></div>
         <div class="about-section_info">
-            <h2 class="about-section_info-title">Мы - профессиональная команда  c общей целью: </h2>
+            <h2 class="about-section_info-title">Мы  ————————<br> профессиональная команда <br> c общей целью: </h2>
             <div class="about-section_info-description">
                 <div class="about-section_info-description-item">
                     <div class="vertical-divider"></div>
-                    <span>Cоздавать веб-решения, которые делают ваш бизнес сильнее, заметнее и успешнее в мире, где цифровая трансформация становится не просто выбором, а необходимостью, Sinep становится вашим надёжным партнёром на пути к успеху</span>
+                    <span>Cоздавать веб-решения, которые делают ваш бизнес сильнее, заметнее и успешнее в мире, где цифровая трансформация становится не просто выбором, а необходимостью, Sinep становится вашим надёжным партнёром на пути к успеху !</span>
                 </div>
             </div>
         </div>
@@ -32,7 +32,7 @@
     &_info {
         width: 45%;
         &-title {
-            font-size: 40px;
+            font-size: 60px;
             font-weight: 500;
         }
         &-description-item {

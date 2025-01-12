@@ -63,16 +63,15 @@ $text-color: #EEEAE6;
     justify-content: space-between;
 }
 .header {
-
-background: #181819;
-box-shadow: -5px 5px 10px rgba(17, 17, 17, 0.2), 5px -5px 10px rgba(17, 17, 17, 0.2), -5px -5px 10px rgba(31, 31, 33, 0.9), 5px 5px 13px rgba(17, 17, 17, 0.9), inset 1px 1px 2px rgba(31, 31, 33, 0.3), inset -1px -1px 2px rgba(17, 17, 17, 0.5);
-
+  background: #181819;
+  box-shadow: -5px 5px 10px rgba(17, 17, 17, 0.2), 5px -5px 10px rgba(17, 17, 17, 0.2), -5px -5px 10px rgba(31, 31, 33, 0.9), 5px 5px 13px rgba(17, 17, 17, 0.9), inset 1px 1px 2px rgba(31, 31, 33, 0.3), inset -1px -1px 2px rgba(17, 17, 17, 0.5);
   position: fixed;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
   padding: 0.5rem 2rem;
   background-color: $background-color;
+  z-index: 10;
   &__logo {
       margin-right: 20px;
   }

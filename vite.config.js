@@ -14,6 +14,7 @@ export default defineConfig({
     //   additionalData: `@import "/src/assets/main.scss";`,
     // })
   ],
+  base: '/sinep/',
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))

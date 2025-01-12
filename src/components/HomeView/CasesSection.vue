@@ -43,6 +43,12 @@
           description: 'Описание третьего кейса',
           image: 'src/assets/images/case_TI.png',
         },
+        {
+          id: 4,
+          title: 'M1M',
+          description: 'Описание третьего кейса',
+          image: 'src/assets/images/case_TI.png',
+        },
       ]);
   
       const goToCase = (id) => {
@@ -69,15 +75,13 @@
     padding: 40px;
     background: #1B1B1C;
     border-radius: 15px;
-
-border: 1px solid #1B1B1C;
-box-shadow: 1px 1px 2px rgba(35, 35, 36, 0.3), -1px -1px 2px rgba(19, 19, 20, 0.5), inset -5px 5px 10px rgba(19, 19, 20, 0.2), inset 5px -5px 10px rgba(19, 19, 20, 0.2), inset -5px -5px 10px rgba(35, 35, 36, 0.9), inset 5px 5px 13px rgba(19, 19, 20, 0.9);
+    box-shadow: 1px 1px 2px rgba(35, 35, 36, 0.3), -1px -1px 2px rgba(19, 19, 20, 0.5), inset -5px 5px 10px rgba(19, 19, 20, 0.2), inset 5px -5px 10px rgba(19, 19, 20, 0.2), inset -5px -5px 10px rgba(35, 35, 36, 0.9), inset 5px 5px 13px rgba(19, 19, 20, 0.9);
 
   
     &__grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 50px;
     }
   }
   
@@ -91,8 +95,11 @@ box-shadow: 1px 1px 2px rgba(35, 35, 36, 0.3), -1px -1px 2px rgba(19, 19, 20, 0.
     cursor: pointer;
   
     &:hover {
-      transform: translateY(-5px);
+      transform: translateY(-10px);
       box-shadow: -5px 5px 10px rgba(14, 14, 14, 0.2), 5px -5px 10px rgba(14, 14, 14, 0.2), -5px -5px 10px rgba(41, 41, 42, 0.9), 5px 5px 13px rgba(14, 14, 14, 0.9), inset 1px 1px 2px rgba(41, 41, 42, 0.3), inset -1px -1px 2px rgba(14, 14, 14, 0.5);
+      .case-card__title {
+        color: #CAA153;
+      }
     }
   
     &__image {
@@ -103,9 +110,11 @@ box-shadow: 1px 1px 2px rgba(35, 35, 36, 0.3), -1px -1px 2px rgba(19, 19, 20, 0.
     }
   
     &__title {
+      transition: 0.3s;
       font-size: 1.5rem;
       color: #333;
       margin-bottom: 10px;
+      font-weight: 600;
     }
   
     &__description {
