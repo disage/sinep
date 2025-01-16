@@ -5,12 +5,12 @@
     <section class="hero-section">
         <div class="row">
             <div class="hero-section_info">
-                <h1>Добро пожаловать в <br> SINEP Group !</h1>
+                <h1>Добро пожаловать в <br> SINEP GROUP !</h1>
                 <span class="hero-section_info-description">Мы агентство, которое строит цифровое будущее бизнеса!</span>
                 <div class="hero-section_statistics">
                     <div class="hero-section_statistics-item">
                         <img src="@/assets/images/projects_icon.png" alt="projects_icon">
-                        <span class="hero-section_statistics-item-name">Ниш</span>
+                        <span class="hero-section_statistics-item-name">Охвачено ниш</span>
                         <span class="hero-section_statistics-item-count">80+</span>
                     </div>
                     <div class="hero-section_statistics-item">
@@ -21,7 +21,7 @@
                     <div class="hero-section_statistics-item">
                         <img src="@/assets/images/projects_icon.png" alt="projects_icon">
                         <span class="hero-section_statistics-item-name">Заработано клиентам</span>
-                        <span class="hero-section_statistics-item-count">70к $</span>
+                        <span class="hero-section_statistics-item-count">150к $</span>
                     </div>
                 </div>
                 <div class="hero-section_clients">
@@ -55,7 +55,7 @@
         &-description{
             margin-top: 20px;
             font-weight: 400;
-            font-size: 25px;
+            font-size: 22px;
         }
     }
     &_image {

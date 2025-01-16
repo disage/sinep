@@ -6,25 +6,28 @@ import WhyWeSection from '../components/HomeView/WhyWeSection.vue'
 import OurServicesSection from '@/components/HomeView/OurServicesSection.vue'
 import CasesSection from '@/components/HomeView/CasesSection.vue'
 import ContactsSection from '@/components/HomeView/ContactsSection.vue'
+import Footer from '@/components/Footer.vue'
+
 import Divider from '../components/Divider.vue'
 </script>
 
 <template>
   <main>
-    <HeroSection/>
+    <HeroSection data-section="hero"/>
     <Divider/>
-    <AboutUsSection/>
+    <AboutUsSection data-section="aboutSection" ref="aboutSection"/>
     <Divider/>
-    <AboutServicesSection/>
+    <AboutServicesSection />
     <Divider/>
-    <WhyWeSection/>
+    <WhyWeSection data-section="whyWeSection" ref="whyWeSection"/>
     <Divider/>
-    <OurServicesSection/>
+    <OurServicesSection data-section="servicesSection" ref="servicesSection"/>
     <Divider/>
-    <CasesSection/>
+    <CasesSection data-section="casesSection" ref="casesSection"/>
     <Divider/>
-    <ContactsSection/>
+    <ContactsSection data-section="contactsSection" ref="contactsSection"/>
     <Divider/>
+    <Footer/>
   </main>
 </template>
 

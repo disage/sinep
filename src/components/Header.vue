@@ -1,18 +1,16 @@
   
-  <script>
+  <script setup>
   import { ref } from "vue";
+  import eventBus from '../helpers/eventBus';
+  const isMenuOpen = ref(false);
   
-  export default {
-    setup() {
-      const isMenuOpen = ref(false);
-  
-      const toggleMenu = () => {
-        isMenuOpen.value = !isMenuOpen.value;
-      };
-  
-      return { isMenuOpen, toggleMenu };
-    },
+  const toggleMenu = () => {
+    isMenuOpen.value = !isMenuOpen.value;
   };
+
+  const scrollTo = (sectionName) => {
+    eventBus.$emit('scroll-to-section', sectionName);
+  }
   </script>
 
 <template>
@@ -21,11 +19,13 @@
             <div class="header-navigations">
                 <img class="header__logo" src="../assets/images/mini_logo.png"/>
                 <nav class="header__nav">
-                    <a href="#home" class="header__link">Про нас</a>
-                    <a href="#about" class="header__link">Услуги</a>
-                    <a href="#services" class="header__link">Кейсы</a>
-                    <a href="#portfolio" class="header__link">Услуги</a>
-                    <a href="#contact" class="header__link">Контакты</a>
+                  <ul>
+                    <li @click="scrollTo('aboutSection')" class="header__link">Про нас</li>
+                    <li @click="scrollTo('servicesSection')" class="header__link">Услуги</li>
+                    <li @click="scrollTo('casesSection')" class="header__link">Кейсы</li>
+                    <li class="header__link">Отзывы</li>
+                    <li @click="scrollTo('contactsSection')" class="header__link">Контакты</li>
+                  </ul>
                 </nav>
             </div>
             <div class="header__controls">
@@ -77,9 +77,14 @@ $text-color: #EEEAE6;
   }
 
   &__nav {
-    display: flex;
-    gap: 1rem;
-
+    ul {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      li {
+        cursor: pointer;
+      }
+    }
     .header__link {
       text-decoration: none;
       color: #BEBEBE;

@@ -4,10 +4,10 @@
         <div tion class="case-section">
         <div class="case-section__grid">
             <div
-            v-for="caseItem in cases"
-            :key="caseItem.id"
-            class="case-card"
-            @click="goToCase(caseItem.id)"
+              v-for="caseItem in cases"
+              :key="caseItem.id"
+              class="case-card"
+              @click="goToCase(caseItem.id)"
             >
             <img :src="caseItem.image" :alt="caseItem.title" class="case-card__image" />
             <h3 class="case-card__title">{{ caseItem.title }}</h3>
@@ -29,25 +29,25 @@
           id: 1,
           title: 'TalentInsight',
           description: 'Описание первого кейса',
-          image: 'src/assets/images/case_TI.png',
+          image: new URL('@/assets/images/case_TI.png', import.meta.url).href,
         },
         {
           id: 2,
           title: 'Рестомания',
           description: 'Описание второго кейса',
-          image: 'src/assets/images/case_TI.png',
+          image: new URL('@/assets/images/case_TI.png', import.meta.url).href,
         },
         {
           id: 3,
           title: 'M1M',
           description: 'Описание третьего кейса',
-          image: 'src/assets/images/case_TI.png',
+          image: new URL('@/assets/images/case_TI.png', import.meta.url).href,
         },
         {
           id: 4,
           title: 'M1M',
           description: 'Описание третьего кейса',
-          image: 'src/assets/images/case_TI.png',
+          image: new URL('@/assets/images/case_TI.png', import.meta.url).href,
         },
       ]);
   

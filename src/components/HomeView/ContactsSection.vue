@@ -111,15 +111,15 @@ import { ref } from 'vue';
             }
         }
     }
-        $form-bg-color: #1B1B1C;
-        $shadow-color: rgba(0, 0, 0, 0.5);
+    $form-bg-color: #1B1B1C;
+    $shadow-color: rgba(0, 0, 0, 0.5);
 
-        .form-container {
-            background-color: $form-bg-color;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #EEEAE6;
+    .form-container {
+        background-color: $form-bg-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #EEEAE6;
 
         form {
             background-color: $form-bg-color;
@@ -129,7 +129,7 @@ import { ref } from 'vue';
             max-width: 40%;
             display: flex;
             flex-direction: column;
-            gap: 16px;
+            gap: 20px;
         }
 
         .form-field {
@@ -177,6 +177,7 @@ import { ref } from 'vue';
                 font-size: 16px;
                 cursor: pointer;
                 margin-top: 20px;
+                margin-bottom: 50px;
                 transition: box-shadow 0.3s ease;
 
                 &:hover {
