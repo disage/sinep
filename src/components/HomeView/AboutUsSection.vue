@@ -5,7 +5,7 @@
     <section class="about-section">
         <div class="about-section_image"></div>
         <div class="about-section_info">
-            <h2 class="about-section_info-title">Мы  ————————<br> профессиональная команда <br> c общей целью: </h2>
+            <h2 class="about-section_info-title">Мы — команда<br> профессионалов <br> c общей целью: </h2>
             <div class="about-section_info-description">
                 <div class="about-section_info-description-item">
                     <div class="vertical-divider"></div>
@@ -50,6 +50,34 @@
             span {
                 width: 90%;
                 font-size: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .about-section {
+        flex-wrap: wrap-reverse;
+        &_image {
+            width: 100%;
+            height: 70vh;
+            background-position: center;
+        }
+        &_info {
+            width: 100%;
+            &-title {
+                font-size: 50px;
+                word-wrap: break-word;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .about-section {
+        &_info {
+            &-title {
+                font-size: 40px;
             }
         }
     }

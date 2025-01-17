@@ -45,6 +45,7 @@ const items = [
     justify-content: space-between;
     max-width: 1440px;
     &_item {
+      justify-content: space-between;
       background: #1B1B1C;
       border-radius: 15px;
       border: 1px solid #1B1B1C;
@@ -72,4 +73,14 @@ const items = [
     }
   }
 }
+
+@media screen and (max-width: 900px) {
+  .services-list {
+    justify-content: center!important;
+  }
+  .services-list_item {
+    width: 80%!important;
+  }
+}
+
 </style>

@@ -93,14 +93,16 @@ import { ref } from 'vue';
         font-size: 20px;
     }
     &_icons {
+        flex-wrap: wrap;
         margin: 100px auto;
         display: flex;
         gap: 50px;
+        justify-content: center;
         &-item {
             display: flex;
             flex-direction: column;
             align-items: center;
-            width: 30%;
+            width: 25%;
             text-align: center;
             img {
                 width: 140px;
@@ -137,6 +139,7 @@ import { ref } from 'vue';
 
             input,
             textarea {
+            box-sizing: border-box;
             width: 100%;
             padding: 20px;
             border-radius: 8px;
@@ -189,6 +192,16 @@ import { ref } from 'vue';
                 }
             }
         }
+    }
+}
+@media screen and (max-width: 900px) {
+    .contacts-section_icons {
+        &-item {
+            width: 40%;
+        }
+    }
+    form {
+        max-width: 70%!important;
     }
 }
 </style>

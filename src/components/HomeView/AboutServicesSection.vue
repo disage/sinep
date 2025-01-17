@@ -51,7 +51,7 @@
         box-shadow: -5px 5px 10px rgba(14, 14, 14, 0.2), 5px -5px 10px rgba(14, 14, 14, 0.2), -5px -5px 10px rgba(41, 41, 42, 0.9), 5px 5px 13px rgba(14, 14, 14, 0.9), inset 1px 1px 2px rgba(41, 41, 42, 0.3), inset -1px -1px 2px rgba(14, 14, 14, 0.5);
         display: flex;
         flex-wrap: wrap;
-        gap: 100px 30px;
+        gap: 50px 30px;
         justify-content: center;
         margin: 50px auto;
         max-width: 1440px;
@@ -61,8 +61,7 @@
             flex-direction: column;
             align-items: center;
             img {
-                max-width: 150px;
-                margin-bottom: 30px;
+                max-width: 200px;
             }
             &-name {
                 font-weight: 500;
