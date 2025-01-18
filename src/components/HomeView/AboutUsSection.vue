@@ -77,7 +77,7 @@
     .about-section {
         &_info {
             &-title {
-                font-size: 40px;
+                font-size: 35px;
             }
         }
     }

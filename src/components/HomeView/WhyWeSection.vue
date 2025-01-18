@@ -83,7 +83,6 @@ h2 {
   }
   
   .accordion-content {
-    max-height: 0;
     overflow: hidden;
     padding: 0 20px 5px 20px;
     opacity: 0;
@@ -95,7 +94,6 @@ h2 {
   }
   
   .accordion-item.open .accordion-content {
-    max-height: 100px;
     opacity: 1;
   }
   .accordion-item.open .accordion-header {
@@ -108,4 +106,11 @@ h2 {
     color: #CAA153;
     transition: 0.3s ease;
   }
+
+  @media screen and (max-width: 620px) {
+    .accordion {
+      width: 100%;
+    }
+  }
+  
 </style>

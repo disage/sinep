@@ -166,6 +166,7 @@
 footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     .footer-column {
         p {
             margin-top: 0;

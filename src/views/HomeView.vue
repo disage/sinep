@@ -39,5 +39,11 @@ main {
   max-width: 1920px;
   margin: auto;
 }
+@media screen and (max-width: 620px) {
+  main {
+    padding: 0 25px;
+  }
+}
+
 </style>
 

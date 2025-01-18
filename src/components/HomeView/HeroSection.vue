@@ -64,7 +64,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
             z-index: 3;
             display: inline-block;
             span {
-                font-size: 30px;
+                font-size: 28px;
                 color: #cccccc;
                 font-weight: 200;
                 display: flex;
@@ -105,11 +105,6 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 &:nth-of-type(3) { animation-delay: 2.4s; }
             }
         }
-        h1 {
-            width: fit-content;
-            display: block;
-        }
-
     }
     &_logo {
         display: flex;
@@ -125,7 +120,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
         word-wrap: break-word;
         font-style: normal;
         font-weight: 700;
-        font-size: 70px;
+        font-size: 65px;
         text-transform: uppercase;
         color: #EEEAE6;
         text-shadow: 5px 5px 15px #000000;
@@ -178,6 +173,55 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
     z-index: -2;
 }
 
+
+@media screen and (min-width: 900px) and (max-width: 1440px) {
+
+    .hero-section_info {
+        width: 60%;
+        .hero-section_info-text {
+            h2 {
+                font-size: 50px!important;
+            }
+            span {
+                font-size: 22px;
+            }
+        }
+    }
+    .hero-section_logo {
+        width: 40%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    h2 {
+        font-size: 50px!important;
+    }
+    span {
+        font-size: 21px!important;
+    }
+    .hero-section_info {
+        width: 90%;
+    }
+    .hero-section_logo {
+         width: 10%;
+     }
+ }
+
+
+ @media screen and (max-width: 620px) {
+    h2 {
+        font-size: 38px!important;
+    }
+    span {
+        font-size: 16px!important;
+    }
+    .hero-section_info {
+        width: 100%;
+    }
+    .hero-section_logo {
+         display: none;
+     }
+ }
 
 
 </style>

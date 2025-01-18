@@ -199,4 +199,10 @@ $text-color: #EEEAE6;
   }
 }
 
+@media screen and (max-width: 900px) {
+.header__nav {
+  display: none;
+}
+}
+
 </style>
