@@ -13,37 +13,36 @@ import Divider from '../components/Divider.vue'
 
 <template>
   <main>
-    <HeroSection data-section="hero"/>
-    <Divider/>
-    <AboutUsSection data-section="aboutSection" ref="aboutSection"/>
-    <Divider/>
+    <HeroSection data-section="heroSection" />
+    <Divider />
+    <AboutUsSection data-section="aboutSection" ref="aboutSection" id="aboutSection"/>
+    <Divider />
     <AboutServicesSection />
-    <Divider/>
-    <WhyWeSection data-section="whyWeSection" ref="whyWeSection"/>
-    <Divider/>
-    <OurServicesSection data-section="servicesSection" ref="servicesSection"/>
-    <Divider/>
-    <CasesSection data-section="casesSection" ref="casesSection"/>
-    <Divider/>
-    <ContactsSection data-section="contactsSection" ref="contactsSection"/>
-    <Divider/>
-    <Footer/>
+    <Divider />
+    <WhyWeSection data-section="whyWeSection" ref="whyWeSection" id="whyWeSection" />
+    <Divider />
+    <OurServicesSection data-section="servicesSection" ref="servicesSection" id="servicesSection"/>
+    <Divider />
+    <CasesSection data-section="casesSection" ref="casesSection" id="casesSection" />
+    <Divider />
+    <ContactsSection data-section="contactsSection" ref="contactsSection" id="contactsSection"/>
+    <Divider />
+    <Footer />
   </main>
 </template>
 
 <style lang="scss" scoped>
-
 main {
   background: #1B1B1C;
   padding: 0 50px;
   max-width: 1920px;
   margin: auto;
 }
+
 @media screen and (max-width: 620px) {
   main {
     padding: 0 25px;
   }
 }
-
 </style>
 

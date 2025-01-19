@@ -1,6 +1,6 @@
 <template>
     <button class="neumorphic-button">
-      <span class="icon">
+      <span class="icon" v-if="$slots.icon">
         <slot name="icon"></slot>
       </span>
       <span class="text">
@@ -18,7 +18,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
     background: #1B1B1C;
     color: #EEEAE6;
     font-size: 16px;
@@ -42,6 +41,7 @@
   .icon {
     display: flex;
     align-items: center;
+    margin-right: 8px;
   }
   
   .text {

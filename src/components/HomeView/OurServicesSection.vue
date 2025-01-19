@@ -1,35 +1,44 @@
 <script setup>
+import { useRouter } from 'vue-router';
 import Button from '../Button.vue';
-const items = [
-  { name: 'Таргет', duration: 'от 1 месяца'},
-  { name: 'Разработка сайта', duration: 'от 2-х недель'},
-  { name: 'Маркетинговое сопровождение', duration: 'от 1 месяца'},
-  { name: 'Разработка ботов', duration: 'от 2-х недель'},
-  { name: 'Создание эксплейнеров', duration: 'от 1 месяца'},
-  { name: 'Создание гет курсов', duration: 'от 2-х недель'},
+const services = [
+  { slug: 'target', name: 'Таргет', duration: 'от 1 месяца' },
+  { slug: 'website', name: 'Разработка сайта', duration: 'от 2-х недель' },
+  { slug: 'marketing', name: 'Маркетинговое сопровождение', duration: 'от 1 месяца' },
+  { slug: 'bot', name: 'Разработка ботов', duration: 'от 2-х недель' },
+  { slug: 'explainer', name: 'Создание эксплейнеров', duration: 'от 1 месяца' },
+  { slug: 'get-course', name: 'Создание гет курсов', duration: 'от 2-х недель' },
 ];
+const router = useRouter();
+
+const goToService = (slug) => {
+  router.push(`/service/${slug}`);
+};
 </script>
 
 <template>
   <section class="our-services-section">
-      <h2>IT-услуги, которые помогут вам быть на шаг впереди</h2>
-      <div class="services-list">
-          <div class="services-list_item" v-for="(item, index) in items" :key="index">
-            <span class="services-list_item-name">{{item.name}}</span>
-            <div class="row">
-              <span class="services-list_item-duration">{{item.duration}}</span>
-              <Button>
-                  <template #icon>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                      <path d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 14H4a.5.5 0 0 1-.491-.408L1.01 1.607 0 1.5zM4.982 6l1 5H12l1.19-6H4.982z"/>
-                      <path d="M7.5 9.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm-3 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm6 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z"/>
-                    </svg>
-                  </template>
-                  Заказать
-                </Button>
-              </div>
-          </div>
+    <h2>IT-услуги, которые помогут вам быть на шаг впереди</h2>
+    <div class="services-list">
+      <div class="services-list_item" v-for="(service, index) in services" :key="index">
+        <span class="services-list_item-name">{{ service.name }}</span>
+        <div class="row">
+          <span class="services-list_item-duration">{{ service.duration }}</span>
+          <Button @click="goToService(service.slug)">
+            <template #icon>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
+                viewBox="0 0 16 16">
+                <path
+                  d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 14H4a.5.5 0 0 1-.491-.408L1.01 1.607 0 1.5zM4.982 6l1 5H12l1.19-6H4.982z" />
+                <path
+                  d="M7.5 9.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm-3 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm6 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z" />
+              </svg>
+            </template>
+            Заказать
+          </Button>
+        </div>
       </div>
+    </div>
   </section>
 </template>
 
@@ -38,12 +47,14 @@ const items = [
   h2 {
     text-align: center;
   }
+
   .services-list {
     margin: 100px auto auto auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: 1440px;
+
     &_item {
       justify-content: space-between;
       background: #1B1B1C;
@@ -55,14 +66,17 @@ const items = [
       margin-bottom: 40px;
       padding: 30px;
       width: 40%;
+
       &-name {
         font-style: normal;
         font-weight: 500;
         font-size: 24px;
       }
+
       &-duration {
         display: flex;
       }
+
       .row {
         margin-top: 40px;
         display: flex;
@@ -76,11 +90,10 @@ const items = [
 
 @media screen and (max-width: 900px) {
   .services-list {
-    justify-content: center!important;
+    justify-content: center !important;
   }
-  .services-list_item {
-    width: 80%!important;
-  }
-}
 
-</style>
+  .services-list_item {
+    width: 80% !important;
+  }
+}</style>

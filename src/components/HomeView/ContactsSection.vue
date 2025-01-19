@@ -8,7 +8,6 @@ import { ref } from 'vue';
 
     const handleSubmit = () => {
         console.log('Форма отправлена', { name: name.value, email: email.value, phone: phone.value, message: message.value });
-        // Здесь можно добавить логику отправки данных на сервер
     };
 </script>
 <template>
@@ -19,7 +18,7 @@ import { ref } from 'vue';
             </iframe>
         </div>
         <h2>Свяжитесь с нами сегодня !</h2>
-            <p>Планируете новый проект? Нужна помощь с текущим? Напишите нам о потребностях вашего проекта, и мы ответим в тот же день</p>
+            <p class="contacts-section_description">Планируете новый проект? Нужна помощь с текущим? Напишите нам о потребностях вашего проекта, и мы ответим в тот же день</p>
             <div class="contacts-section_icons">
                 <div class="contacts-section_icons-item">
                     <img src="@/assets/images/projects_icon.png" alt="projects_icon">
@@ -195,13 +194,19 @@ import { ref } from 'vue';
     }
 }
 @media screen and (max-width: 900px) {
+    .contacts-section_map {
+        width: 80%;
+    }
     .contacts-section_icons {
         &-item {
             width: 40%;
         }
     }
     form {
-        max-width: 70%!important;
+        max-width: 90%!important;
+    }
+    .contacts-section_description {
+        width: 90%!important;
     }
 }
 </style>

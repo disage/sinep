@@ -1,145 +1,23 @@
   
-  <script>
-  
+<script setup>
+    import EmailIcon from '@/assets/images/emailIcon.vue';
+    import InstagramIcon from '@/assets/images/instagramIcon.vue';
+    import TelegramIcon from '@/assets/images/telegramIcon.vue';
+    import eventBus from '../helpers/eventBus';
 
-  </script>
+    const scrollTo = (sectionName) => {
+        eventBus.$emit('scroll-to-section', sectionName);
+    }
+</script>
 
 <template>
     <footer>
         <div class="footer-column">
             <p>Мы помогаем нашим клиентам понять: цифровые услуги —  <br> это не только скорость и простота технологий.</p>
             <div class="footer-column_media">
-                <svg width="100" height="100" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_ddddii_423_2)">
-                    <circle cx="65" cy="65" r="50" fill="#1B1B1C"/>
-                    </g>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 42.5L35 45V85L37.5 87.5H92.5L95 85V45L92.5 42.5H37.5ZM40 50.6517V82.5H90V50.6508L64.9997 73.3787L40 50.6517ZM86.033 47.5H43.9662L64.9997 66.6213L86.033 47.5Z" fill="#868483"/>
-                    <defs>
-                    <filter id="filter0_ddddii_423_2" x="0" y="0" width="133" height="133" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="5" dy="5"/>
-                    <feGaussianBlur stdDeviation="6.5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.9 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-5" dy="-5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.137255 0 0 0 0 0.141176 0 0 0 0.9 0"/>
-                    <feBlend mode="normal" in2="effect1_dropShadow_423_2" result="effect2_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="5" dy="-5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.2 0"/>
-                    <feBlend mode="normal" in2="effect2_dropShadow_423_2" result="effect3_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-5" dy="5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.2 0"/>
-                    <feBlend mode="normal" in2="effect3_dropShadow_423_2" result="effect4_dropShadow_423_2"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_423_2" result="shape"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-1" dy="-1"/>
-                    <feGaussianBlur stdDeviation="1"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.5 0"/>
-                    <feBlend mode="normal" in2="shape" result="effect5_innerShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="1" dy="1"/>
-                    <feGaussianBlur stdDeviation="1"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.137255 0 0 0 0 0.141176 0 0 0 0.3 0"/>
-                    <feBlend mode="normal" in2="effect5_innerShadow_423_2" result="effect6_innerShadow_423_2"/>
-                    </filter>
-                    </defs>
-                </svg>                <svg width="100" height="100" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_ddddii_423_2)">
-                    <circle cx="65" cy="65" r="50" fill="#1B1B1C"/>
-                    </g>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 42.5L35 45V85L37.5 87.5H92.5L95 85V45L92.5 42.5H37.5ZM40 50.6517V82.5H90V50.6508L64.9997 73.3787L40 50.6517ZM86.033 47.5H43.9662L64.9997 66.6213L86.033 47.5Z" fill="#868483"/>
-                    <defs>
-                    <filter id="filter0_ddddii_423_2" x="0" y="0" width="133" height="133" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="5" dy="5"/>
-                    <feGaussianBlur stdDeviation="6.5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.9 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-5" dy="-5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.137255 0 0 0 0 0.141176 0 0 0 0.9 0"/>
-                    <feBlend mode="normal" in2="effect1_dropShadow_423_2" result="effect2_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="5" dy="-5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.2 0"/>
-                    <feBlend mode="normal" in2="effect2_dropShadow_423_2" result="effect3_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-5" dy="5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.2 0"/>
-                    <feBlend mode="normal" in2="effect3_dropShadow_423_2" result="effect4_dropShadow_423_2"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_423_2" result="shape"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-1" dy="-1"/>
-                    <feGaussianBlur stdDeviation="1"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.5 0"/>
-                    <feBlend mode="normal" in2="shape" result="effect5_innerShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="1" dy="1"/>
-                    <feGaussianBlur stdDeviation="1"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.137255 0 0 0 0 0.141176 0 0 0 0.3 0"/>
-                    <feBlend mode="normal" in2="effect5_innerShadow_423_2" result="effect6_innerShadow_423_2"/>
-                    </filter>
-                    </defs>
-                </svg>                <svg width="100" height="100" viewBox="0 0 133 133" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g filter="url(#filter0_ddddii_423_2)">
-                    <circle cx="65" cy="65" r="50" fill="#1B1B1C"/>
-                    </g>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M37.5 42.5L35 45V85L37.5 87.5H92.5L95 85V45L92.5 42.5H37.5ZM40 50.6517V82.5H90V50.6508L64.9997 73.3787L40 50.6517ZM86.033 47.5H43.9662L64.9997 66.6213L86.033 47.5Z" fill="#868483"/>
-                    <defs>
-                    <filter id="filter0_ddddii_423_2" x="0" y="0" width="133" height="133" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="5" dy="5"/>
-                    <feGaussianBlur stdDeviation="6.5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.9 0"/>
-                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-5" dy="-5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.137255 0 0 0 0 0.141176 0 0 0 0.9 0"/>
-                    <feBlend mode="normal" in2="effect1_dropShadow_423_2" result="effect2_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="5" dy="-5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.2 0"/>
-                    <feBlend mode="normal" in2="effect2_dropShadow_423_2" result="effect3_dropShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-5" dy="5"/>
-                    <feGaussianBlur stdDeviation="5"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.2 0"/>
-                    <feBlend mode="normal" in2="effect3_dropShadow_423_2" result="effect4_dropShadow_423_2"/>
-                    <feBlend mode="normal" in="SourceGraphic" in2="effect4_dropShadow_423_2" result="shape"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="-1" dy="-1"/>
-                    <feGaussianBlur stdDeviation="1"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.0745098 0 0 0 0 0.0745098 0 0 0 0 0.0784314 0 0 0 0.5 0"/>
-                    <feBlend mode="normal" in2="shape" result="effect5_innerShadow_423_2"/>
-                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                    <feOffset dx="1" dy="1"/>
-                    <feGaussianBlur stdDeviation="1"/>
-                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1"/>
-                    <feColorMatrix type="matrix" values="0 0 0 0 0.137255 0 0 0 0 0.137255 0 0 0 0 0.141176 0 0 0 0.3 0"/>
-                    <feBlend mode="normal" in2="effect5_innerShadow_423_2" result="effect6_innerShadow_423_2"/>
-                    </filter>
-                    </defs>
-                </svg>
-  
+                <EmailIcon/>
+                <InstagramIcon/>
+                <TelegramIcon/>
             </div>
         </div>
         <div class="footer-column">
@@ -150,11 +28,12 @@
         </div>
         <div class="footer-column">
             <ul class="footer-column_navigation">
-                <li>Главная</li>
-                <li>Услуги</li>
-                <li>Кейсы</li>
-                <li>Отзывы</li>
-                <li>Контакты</li>
+                <li @click="scrollTo('heroSection')">Главная</li>
+                <li @click="scrollTo('aboutSection')">О нас</li>
+                <li @click="scrollTo('servicesSection')">Услуги</li>
+                <li @click="scrollTo('casesSection')">Кейсы</li>
+                <li @click="scrollTo('contactsSection')">Отзывы</li>
+                <li @click="scrollTo('contactsSection')">Контакты</li>
             </ul>
         </div>
     </footer>
@@ -176,7 +55,13 @@ footer {
             color: #EEEAE6;
             list-style: none;
             li {
+                transition: 0.3s ease-in-out;
                 margin-bottom: 10px;
+                cursor: pointer;
+                &:hover {
+                    transform: translateX(-20px);
+                    transition: 0.3s ease-in-out;
+                }
             }
         }
         &_navigation {
@@ -184,6 +69,8 @@ footer {
         }
         &_media {
             margin-top: 50px;
+            display: flex;
+            gap: 20px;
             svg:hover {
                 transition: 0.3s;
                 cursor: pointer;
@@ -192,6 +79,24 @@ footer {
                     fill: #CAA153;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .footer-column {
+        margin-bottom: 50px;
+        width: 100%;
+        ul {
+            padding: 0;
+            li {
+                &:hover {
+                    transform: translateX(20px)!important;
+                }
+            }
+        }
+        &_navigation {
+            text-align: left!important;
         }
     }
 }

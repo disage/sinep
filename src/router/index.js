@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import ServiceView from '../views/ServiceView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -9,15 +10,36 @@ const router = createRouter({
       name: 'home',
       component: HomeView,
     },
+    { 
+      path: '/service/:slug',
+      name: 'service',
+      component: ServiceView
+    },
     // {
     //   path: '/about',
     //   name: 'about',
-    //   // route level code-splitting
-    //   // this generates a separate chunk (About.[hash].js) for this route
-    //   // which is lazy-loaded when the route is visited.
     //   component: () => import('../views/AboutView.vue'),
     // },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition; // Сохраненная позиция при возврате
+    }
+    if (to.hash) {
+      // Используем setTimeout для задержки прокрутки
+      setTimeout(() => {
+        const element = document.querySelector(to.hash);
+        if (element) {
+          window.scrollTo({
+            top: element.offsetTop,
+            behavior: 'smooth',
+          });
+        }
+      }, 100); // Задержка в 100 мс для стабильности
+      return { top: 0 }; // По умолчанию скролл в начало
+    }
+    return { top: 0 }; // Прокрутка к началу страницы
+  },
 })
 
 export default router

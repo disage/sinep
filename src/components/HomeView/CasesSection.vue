@@ -20,6 +20,7 @@
   
   <script>
   import { ref } from 'vue';
+  import { useRouter } from 'vue-router';
 
   export default {
     name: 'CaseSection',
@@ -51,8 +52,10 @@
         },
       ]);
   
-      const goToCase = (id) => {
-        window.location.href = `/cases/${id}`;
+      const router = useRouter();
+
+      const goToCase= (id) => {
+        router.push(`/case/${id}`);
       };
   
       return {
