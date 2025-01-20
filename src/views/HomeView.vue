@@ -15,17 +15,17 @@ import Divider from '../components/Divider.vue'
   <main>
     <HeroSection data-section="heroSection" />
     <Divider />
-    <AboutUsSection data-section="aboutSection" ref="aboutSection" id="aboutSection"/>
+    <AboutUsSection data-section="aboutSection" ref="aboutSection" id="aboutSection" />
     <Divider />
     <AboutServicesSection />
     <Divider />
     <WhyWeSection data-section="whyWeSection" ref="whyWeSection" id="whyWeSection" />
     <Divider />
-    <OurServicesSection data-section="servicesSection" ref="servicesSection" id="servicesSection"/>
+    <OurServicesSection data-section="servicesSection" ref="servicesSection" id="servicesSection" />
     <Divider />
     <CasesSection data-section="casesSection" ref="casesSection" id="casesSection" />
     <Divider />
-    <ContactsSection data-section="contactsSection" ref="contactsSection" id="contactsSection"/>
+    <ContactsSection data-section="contactsSection" ref="contactsSection" id="contactsSection" />
     <Divider />
     <Footer />
   </main>

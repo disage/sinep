@@ -1,9 +1,10 @@
 
 <script setup>
 import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
 import circleElement from '@/assets/images/circleElement.vue';
 import circleElementLogo from '@/assets/images/circleElementLogo.vue';
-import { useRoute } from 'vue-router';
 import Button from '../Button.vue';
 
 const route = useRoute();
@@ -28,7 +29,9 @@ const descriptions = {
 
 const title = computed(() => titles[slug.value] || 'Услуга не найдена');
 const description = computed(() => descriptions[slug.value] || 'Услуга не найдена');
+
 const scrollTo = (sectionName) => {
+    console.log(sectionName)
     const section = document.querySelector(`[data-section="${sectionName}"]`);
     if (section) {
         section.scrollIntoView({ behavior: 'smooth' });
@@ -55,7 +58,7 @@ const scrollTo = (sectionName) => {
                     <circleElement class="hello-circle" />
                 </div>
                 <div class="service-navigation">
-                    <Button @click="scrollTo('typesSection')">Виды</Button>
+                    <Button v-if="slug === 'website'" @click="scrollTo('serviceTypesSection')">Виды</Button>
                     <Button @click="scrollTo('stepsSection')">Этапы</Button>
                     <Button @click="scrollTo('casesSection')">Кейсы</Button>
                     <Button @click="scrollTo('briefSection')">Бриф</Button>
@@ -102,15 +105,21 @@ const scrollTo = (sectionName) => {
                 animation-delay: 1.8s;
             }
         }
+
         .service-navigation {
             display: flex;
             gap: 20px;
+            background-color: #1B1B1C;
             box-shadow: 1px 1px 2px rgba(35, 35, 36, 0.3), -1px -1px 2px rgba(19, 19, 20, 0.5), inset -5px 5px 10px rgba(19, 19, 20, 0.2), inset 5px -5px 10px rgba(19, 19, 20, 0.2), inset -5px -5px 10px rgba(35, 35, 36, 0.9), inset 5px 5px 13px rgba(19, 19, 20, 0.9);
             border-radius: 15px;
             padding: 20px;
             width: fit-content;
             margin-bottom: 100px;
-
+            flex-wrap: wrap;
+            z-index: 3;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 2.4s;
         }
     }
 
@@ -230,11 +239,12 @@ const scrollTo = (sectionName) => {
 
 @media screen and (max-width: 620px) {
     h2 {
-        font-size: 38px !important;
+        font-size: 32px !important;
     }
 
     span {
-        font-size: 16px !important;
+        margin-top: 10px;
+        font-size: 15px !important;
     }
 
     .hero-section_info {
@@ -243,6 +253,20 @@ const scrollTo = (sectionName) => {
 
     .hero-section_logo {
         display: none;
+    }
+
+    .service-navigation {
+        margin-bottom: 150px !important;
+
+        .neumorphic-button {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2 {
+        font-size: 28px !important;
     }
 }
 </style>

@@ -1,10 +1,23 @@
 <script setup>
+import { computed } from 'vue';
+import { useRoute } from 'vue-router';
+
 import Divider from '@/components/Divider.vue';
 import ServiceHeroSection from '@/components/ServiceView/ServiceHeroSection.vue';
+import ServiceTypesSection from '@/components/ServiceView/ServiceTypesSection.vue';
+import ServiceStepsSection from '@/components/ServiceView/ServiceStepsSection.vue';
+
+const route = useRoute();
+const slug = computed(() => route.params.slug);
+
 </script>
 <template>
     <main>
-        <ServiceHeroSection />
+        <ServiceHeroSection data-section="heroSection" />
+        <Divider />
+        <ServiceTypesSection v-if="slug === 'website'" data-section="serviceTypesSection" />
+        <Divider v-if="slug === 'website'" />
+        <ServiceStepsSection data-section="stepsSection" />
         <Divider />
     </main>
 </template>

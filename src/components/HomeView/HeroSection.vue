@@ -21,7 +21,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                     <div class="overflow-hidden">
                         <span>Мы агентство, которое строит цифровое <br>будущее вашего бизнеса!</span>
                     </div>
-                    <circleElement class="hello-circle"/>
+                    <circleElement class="hello-circle" />
                 </div>
                 <div class="hero-section_info-stats">
                     <div>
@@ -37,7 +37,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 </div>
             </div>
             <div class="hero-section_logo">
-                <circleElementLogo/>
+                <circleElementLogo />
             </div>
         </div>
     </section>
@@ -51,18 +51,22 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
     height: 100vh;
     justify-content: space-between;
     padding-top: 150px;
+
     .row {
         width: 100%;
     }
+
     &_info {
         display: flex;
         justify-content: space-between;
         width: 45%;
         flex-direction: column;
+
         &-text {
             position: relative;
             z-index: 3;
             display: inline-block;
+
             span {
                 font-size: 28px;
                 color: #cccccc;
@@ -73,16 +77,19 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 animation-delay: 1.8s;
             }
         }
+
         &-stats {
             z-index: 3;
             display: flex;
             flex-direction: row;
             margin-bottom: 100px;
             font-size: 20px;
+
             div {
                 display: flex;
                 flex-direction: column;
             }
+
             &-value {
                 opacity: 0;
                 margin-bottom: 10px;
@@ -90,22 +97,42 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 color: #CAA153;
                 font-weight: 600;
                 animation: fadeIn 0.5s forwards;
-                &:nth-of-type(1) { animation-delay: 2s; } 
-                &:nth-of-type(2) { animation-delay: 2.2s; }
-                &:nth-of-type(3) { animation-delay: 2.4s; }
+
+                &:nth-of-type(1) {
+                    animation-delay: 2s;
+                }
+
+                &:nth-of-type(2) {
+                    animation-delay: 2.2s;
+                }
+
+                &:nth-of-type(3) {
+                    animation-delay: 2.4s;
+                }
             }
+
             &-name {
                 opacity: 0;
                 margin-bottom: 10px;
                 font-weight: 300;
                 color: #cccccc;
                 animation: fadeIn 0.5s forwards;
-                &:nth-of-type(1) { animation-delay: 2s; } 
-                &:nth-of-type(2) { animation-delay: 2.2s; }
-                &:nth-of-type(3) { animation-delay: 2.4s; }
+
+                &:nth-of-type(1) {
+                    animation-delay: 2s;
+                }
+
+                &:nth-of-type(2) {
+                    animation-delay: 2.2s;
+                }
+
+                &:nth-of-type(3) {
+                    animation-delay: 2.4s;
+                }
             }
         }
     }
+
     &_logo {
         display: flex;
         flex-direction: column;
@@ -113,9 +140,11 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
         position: relative;
         z-index: 1;
     }
+
     .overflow-hidden {
         overflow: hidden;
     }
+
     h2 {
         word-wrap: break-word;
         font-style: normal;
@@ -130,10 +159,12 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
         transform: translateY(130px);
     }
 }
+
 @keyframes popUpTop {
     0% {
         transform: translateY(130px);
     }
+
     100% {
         transform: translateY(0);
     }
@@ -143,6 +174,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
     0% {
         transform: translateX(-1000px);
     }
+
     100% {
         transform: translateX(0);
     }
@@ -152,6 +184,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
     0% {
         opacity: 0;
     }
+
     100% {
         opacity: 1;
     }
@@ -178,15 +211,18 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
     .hero-section_info {
         width: 60%;
+
         .hero-section_info-text {
             h2 {
-                font-size: 50px!important;
+                font-size: 50px !important;
             }
+
             span {
                 font-size: 22px;
             }
         }
     }
+
     .hero-section_logo {
         width: 40%;
     }
@@ -194,34 +230,38 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
 @media screen and (max-width: 900px) {
     h2 {
-        font-size: 50px!important;
+        font-size: 50px !important;
     }
+
     span {
-        font-size: 21px!important;
+        margin-top: 10px;
+        font-size: 21px !important;
     }
+
     .hero-section_info {
         width: 90%;
     }
+
     .hero-section_logo {
-         width: 10%;
-     }
- }
+        width: 10%;
+    }
+}
 
 
- @media screen and (max-width: 620px) {
+@media screen and (max-width: 620px) {
     h2 {
-        font-size: 38px!important;
+        font-size: 38px !important;
     }
+
     span {
-        font-size: 16px!important;
+        font-size: 16px !important;
     }
+
     .hero-section_info {
         width: 100%;
     }
+
     .hero-section_logo {
-         display: none;
-     }
- }
-
-
-</style>
+        display: none;
+    }
+}</style>

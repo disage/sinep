@@ -1,8 +1,7 @@
   
 <script setup>
-import { useRouter } from 'vue-router';
 import { ref } from "vue";
-import eventBus from '../helpers/eventBus';
+import { useRouter } from 'vue-router';
 
 const router = useRouter();
 const isMenuOpen = ref(false);
@@ -12,16 +11,16 @@ const toggleMenu = () => {
 };
 
 const scrollTo = (sectionName) => {
-    const currentRoute = router.currentRoute.value;
+  const currentRoute = router.currentRoute.value;
 
-    if (currentRoute.name !== 'home') {
-      router.push({ name: 'home', hash: `#${sectionName}` });
-    } else {
-      const section = document.querySelector(`[data-section="${sectionName}"]`);
-      if (section) {
-        section.scrollIntoView({ behavior: 'smooth' });
-      }
+  if (currentRoute.name !== 'home') {
+    router.push({ name: 'home', hash: `#${sectionName}` });
+  } else {
+    const section = document.querySelector(`[data-section="${sectionName}"]`);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
     }
+  }
 };
 const goToHome = () => {
   router.push(`/`);
@@ -85,13 +84,15 @@ $text-color: #EEEAE6;
   width: 100vw;
   box-sizing: border-box;
   display: flex;
-  padding: 0.5rem 2rem;
+  padding: 10px 50px;
   background-color: $background-color;
   z-index: 10;
 
   &__logo {
     margin-right: 20px;
     cursor: pointer;
+    height: 50px;
+    width: 50px;
   }
 
   &__nav {
@@ -223,6 +224,12 @@ $text-color: #EEEAE6;
 @media screen and (max-width: 900px) {
   .header__nav {
     display: none;
+  }
+}
+
+@media screen and (max-width: 620px) {
+  header {
+    padding: 10px 25px !important;
   }
 }
 </style>
