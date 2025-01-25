@@ -6,6 +6,7 @@ import Divider from '@/components/Divider.vue';
 import ServiceHeroSection from '@/components/ServiceView/ServiceHeroSection.vue';
 import ServiceTypesSection from '@/components/ServiceView/ServiceTypesSection.vue';
 import ServiceStepsSection from '@/components/ServiceView/ServiceStepsSection.vue';
+import CasesSection from '@/components/HomeView/CasesSection.vue';
 
 const route = useRoute();
 const slug = computed(() => route.params.slug);
@@ -18,6 +19,8 @@ const slug = computed(() => route.params.slug);
         <ServiceTypesSection v-if="slug === 'website'" data-section="serviceTypesSection" />
         <Divider v-if="slug === 'website'" />
         <ServiceStepsSection data-section="stepsSection" />
+        <Divider />
+        <CasesSection data-section="casesSection"/>
         <Divider />
     </main>
 </template>

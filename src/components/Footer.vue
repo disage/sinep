@@ -45,7 +45,10 @@ footer {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    margin: auto;
+    padding: 0 50px;
     margin-bottom: 50px;
+    max-width: 1920px;
 
     .footer-column {
         p {

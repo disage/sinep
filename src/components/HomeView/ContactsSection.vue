@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue';
+import Button from '../Button.vue';
 
     const name = ref('');
     const email = ref('');
@@ -51,7 +52,7 @@ import { ref } from 'vue';
                     <textarea v-model="message" placeholder="Сообщение"></textarea>
                   </div>
                   <div class="form-button">
-                    <button type="submit">Отправить</button>
+                    <Button>Отправить</Button>
                   </div>
                 </form>
             </div>
@@ -164,33 +165,9 @@ import { ref } from 'vue';
             height: 100px;
             }
         }
-
-        .form-button {
-            display: flex;
-            justify-content: center;
-
-                button {
-                padding: 12px 24px;
-                border-radius: 8px;
-                border: none;
-                background-color: $form-bg-color;
-                box-shadow: 6px 6px 12px $shadow-color, -6px -6px 12px lighten($form-bg-color, 10%);
-                color: #EEEAE6;
-                font-size: 16px;
-                cursor: pointer;
-                margin-top: 20px;
-                margin-bottom: 50px;
-                transition: box-shadow 0.3s ease;
-
-                &:hover {
-                    box-shadow: 6px 6px 20px $shadow-color, -6px -6px 20px lighten($form-bg-color, 10%);
-                }
-
-                &:active {
-                    box-shadow: inset 6px 6px 12px $shadow-color, inset -6px -6px 12px lighten($form-bg-color, 10%);
-                }
-            }
-        }
+    }
+    .form-button {
+        margin: auto;
     }
 }
 @media screen and (max-width: 900px) {

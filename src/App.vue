@@ -1,6 +1,7 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
 import Header from './components/Header.vue';
+import Footer from './components/Footer.vue';
 import { ref } from 'vue';
 import { onMounted } from 'vue';
 const routerView = ref(null);
@@ -23,6 +24,7 @@ onMounted(() => {
 <template>
   <Header @scroll-to-section="scrollToSection" />
   <RouterView ref="routerView" />
+  <Footer />
 </template>
 
 <style scoped>

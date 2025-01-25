@@ -27,7 +27,6 @@ import Divider from '../components/Divider.vue'
     <Divider />
     <ContactsSection data-section="contactsSection" ref="contactsSection" id="contactsSection" />
     <Divider />
-    <Footer />
   </main>
 </template>
 
