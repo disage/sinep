@@ -15,9 +15,9 @@ const scrollTo = (sectionName) => {
         <div class="footer-column">
             <p>Мы помогаем нашим клиентам понять: цифровые услуги — <br> это не только скорость и простота технологий.</p>
             <div class="footer-column_media">
-                <EmailIcon />
-                <InstagramIcon />
-                <TelegramIcon />
+               <a href="mailto:sales.sinepgroup@gmail.com"><EmailIcon /></a>
+                <a href="https://www.instagram.com/sinep_digital"><InstagramIcon/></a>
+                <a href="http://t.me/sinep_group"><TelegramIcon /></a>
             </div>
         </div>
         <div class="footer-column">

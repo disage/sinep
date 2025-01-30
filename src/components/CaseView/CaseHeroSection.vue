@@ -1,8 +1,18 @@
 
 <script setup>
+import { ref, computed } from 'vue';
+import { useRoute } from 'vue-router';
+
 import circleElement from '@/assets/images/circleElement.vue';
 import circleElementLogo from '@/assets/images/circleElementLogo.vue';
+import cases from '@/constants/cases-data'
 
+const route = useRoute();
+const slug = computed(() => route.params.slug);
+const casesList = ref(cases);
+const currentCase = computed(() =>
+    casesList.value.find(caseItem => caseItem.id === slug.value) || null
+);
 </script>
 
 <template>
@@ -12,27 +22,24 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 <div class="hero-section_info-text">
                     <div>
                         <div class="overflow-hidden">
-                            <h2>ПРИВЕТСТВУЕМ</h2>
-                        </div>
-                        <div class="overflow-hidden">
-                            <h2>В SINEP DIGITAL !</h2>
+                            <h2>{{ currentCase.name }}</h2>
                         </div>
                     </div>
                     <div class="overflow-hidden">
-                        <span>Мы агентство, которое строит цифровое <br>будущее вашего бизнеса!</span>
+                        <span>{{ currentCase.description }}</span>
                     </div>
                     <circleElement class="hello-circle" />
                 </div>
                 <div class="hero-section_info-stats">
                     <div>
-                        <span class="hero-section_info-stats-value">150k $</span>
-                        <span class="hero-section_info-stats-value">12+</span>
-                        <span class="hero-section_info-stats-value">80+</span>
+                        <span class="hero-section_info-stats-value">Услуга:</span>
+                        <span v-for="(item, index) in currentCase.statistic" :key="index"
+                            class="hero-section_info-stats-value">{{ item.name }}</span>
                     </div>
                     <div>
-                        <span class="hero-section_info-stats-name">Заработано клиентам</span>
-                        <span class="hero-section_info-stats-name">Крупных проектов</span>
-                        <span class="hero-section_info-stats-name">Охваченных ниш</span>
+                        <span class="hero-section_info-stats-name">Таргет</span>
+                        <span v-for="(item, index) in currentCase.statistic" :key="index"
+                            class="hero-section_info-stats-name">{{ item.value }}</span>
                     </div>
                 </div>
             </div>
@@ -92,10 +99,10 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
             &-value {
                 opacity: 0;
+                color: #cccccc;
                 margin-bottom: 10px;
                 margin-right: 50px;
-                color: #CAA153;
-                font-weight: 600;
+                font-weight: 500;
                 animation: fadeIn 0.5s forwards;
 
                 &:nth-of-type(1) {
@@ -108,6 +115,14 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
                 &:nth-of-type(3) {
                     animation-delay: 2.4s;
+                }
+
+                &:nth-of-type(4) {
+                    animation-delay: 2.6s;
+                }
+
+                &:nth-of-type(5) {
+                    animation-delay: 2.8s;
                 }
             }
 
@@ -115,7 +130,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 opacity: 0;
                 margin-bottom: 10px;
                 font-weight: 300;
-                color: #cccccc;
+                color: #CAA153;
                 animation: fadeIn 0.5s forwards;
 
                 &:nth-of-type(1) {
@@ -129,7 +144,31 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 &:nth-of-type(3) {
                     animation-delay: 2.4s;
                 }
+
+                &:nth-of-type(4) {
+                    animation-delay: 2.6s;
+                }
+
+                &:nth-of-type(5) {
+                    animation-delay: 2.8s;
+                }
             }
+        }
+
+        .service-navigation {
+            display: flex;
+            gap: 20px;
+            background-color: #1B1B1C;
+            box-shadow: 1px 1px 2px rgba(35, 35, 36, 0.3), -1px -1px 2px rgba(19, 19, 20, 0.5), inset -5px 5px 10px rgba(19, 19, 20, 0.2), inset 5px -5px 10px rgba(19, 19, 20, 0.2), inset -5px -5px 10px rgba(35, 35, 36, 0.9), inset 5px 5px 13px rgba(19, 19, 20, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            width: fit-content;
+            margin-bottom: 100px;
+            flex-wrap: wrap;
+            z-index: 3;
+            opacity: 0;
+            animation: fadeIn 0.5s forwards;
+            animation-delay: 2.4s;
         }
     }
 
@@ -149,7 +188,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
         word-wrap: break-word;
         font-style: normal;
         font-weight: 700;
-        font-size: 65px;
+        font-size: 55px;
         text-transform: uppercase;
         color: #EEEAE6;
         text-shadow: 5px 5px 15px #000000;
@@ -214,7 +253,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
         .hero-section_info-text {
             h2 {
-                font-size: 50px !important;
+                font-size: 47px !important;
             }
 
             span {
@@ -230,11 +269,10 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
 @media screen and (max-width: 900px) {
     h2 {
-        font-size: 50px !important;
+        font-size: 47px !important;
     }
 
     span {
-        margin-top: 10px;
         font-size: 21px !important;
     }
 
@@ -250,11 +288,12 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
 @media screen and (max-width: 620px) {
     h2 {
-        font-size: 36px !important;
+        font-size: 32px !important;
     }
 
     span {
-        font-size: 16px !important;
+        margin-top: 10px;
+        font-size: 15px !important;
     }
 
     .hero-section_info {
@@ -263,5 +302,19 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
     .hero-section_logo {
         display: none;
+    }
+
+    .service-navigation {
+        margin-bottom: 150px !important;
+
+        .neumorphic-button {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    h2 {
+        font-size: 28px !important;
     }
 }</style>

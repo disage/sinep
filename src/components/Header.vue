@@ -43,14 +43,14 @@ const goToHome = () => {
         </nav>
       </div>
       <div class="header__controls">
-        <div class="dropdown">
+        <!-- <div class="dropdown">
           <button class="dropdown__button">RU</button>
           <ul class="dropdown__menu">
             <li class="dropdown__item">UA</li>
             <li class="dropdown__item">EN</li>
             <li class="dropdown__item">DE</li>
           </ul>
-        </div>
+        </div> -->
         <div class="hamburger_wrapper">
           <button class="hamburger" @click="toggleMenu">
             <span class="hamburger__line" :class="{ 'hamburger__line--top': isMenuOpen }"></span>
@@ -170,6 +170,7 @@ $text-color: #EEEAE6;
       padding: 9px 16px;
       border-radius: 8px;
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
+      display: none;
     }
 
     .hamburger {
@@ -224,6 +225,9 @@ $text-color: #EEEAE6;
 @media screen and (max-width: 900px) {
   .header__nav {
     display: none;
+  }
+  .hamburger_wrapper {
+    display: flex!important;
   }
 }
 
