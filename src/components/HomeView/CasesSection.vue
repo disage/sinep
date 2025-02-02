@@ -11,7 +11,7 @@
       </div>
       <div class="case-section__grid">
         <div v-for="caseItem in filteredCases" :key="caseItem.id" class="case-card" @click="goToCase(caseItem.id)">
-          <img :src="caseItem.images[0]" :alt="caseItem.name" class="case-card__image" />
+          <img :src="caseItem.images[0].path" :alt="caseItem.name" class="case-card__image" />
           <h3 class="case-card__title">{{ caseItem.name }}</h3>
           <p class="case-card__description">{{ caseItem.description }}</p>
         </div>
@@ -32,12 +32,12 @@ export default {
     const router = useRouter();
 
     const slug = computed(() => route.params.slug);
-    const filters = ref(["website", "target", "marketing", "bots"]);
+    const filters = ref(["website", "target", "marketing", "bot"]);
     const filterNames = ref({
       website: "Веб-сайты",
       target: "Таргет",
       marketing: "Маркетинг",
-      bots: "Боты"
+      bot: "Боты"
     });
     const casesList = ref(cases);
     const currentFilter = ref(slug.value || "website");

@@ -25,15 +25,6 @@ const goToService = (slug) => {
         <div class="row">
           <span class="services-list_item-duration">{{ service.duration }}</span>
           <Button @click="goToService(service.slug)">
-            <template #icon>
-              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart"
-                viewBox="0 0 16 16">
-                <path
-                  d="M0 1.5A.5.5 0 0 1 .5 1h1a.5.5 0 0 1 .485.379L2.89 5H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 14H4a.5.5 0 0 1-.491-.408L1.01 1.607 0 1.5zM4.982 6l1 5H12l1.19-6H4.982z" />
-                <path
-                  d="M7.5 9.5a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm-3 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1zm6 0a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1z" />
-              </svg>
-            </template>
             Заказать
           </Button>
         </div>

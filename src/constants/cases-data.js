@@ -5,8 +5,8 @@ const cases = [
         name: "Продвижение премиум мебели",
         description: "Наш клиент занимается созданием эксклюзивной мебели на заказ. Главной целью было привлечь релевантную аудиторию и увеличить доход за счет таргетированной рекламы.",
         images: [
-            new URL('@/assets/images/case_TI.png', import.meta.url).href,
-            new URL('@/assets/images/case_TI.png', import.meta.url).href
+            {path: new URL('@/assets/images/case_TI.png', import.meta.url).href, title: "Экран 1"},
+            {path: new URL('@/assets/images/case_TI.png', import.meta.url).href, title: "Экран 2"}
         ],
         statistic: [
             { name: "Продолжительность кампаний:", value: "6 месяцев" },
@@ -27,12 +27,12 @@ const cases = [
         name: "TalentInsight",
         description: "Платформа для коачинг компании",
         images: [
-            new URL('@/assets/images/case_TI.png', import.meta.url).href,
-            new URL('@/assets/images/case_TI.png', import.meta.url).href
+            {path: new URL('@/assets/images/case_TI.png', import.meta.url).href, title: "Экран 1"},
+            {path: new URL('@/assets/images/case_TI.png', import.meta.url).href, title: "Экран 2"}
         ],
         statistic: [
+            { name: "Ссылка:", value: "talentinsight-europe.com" },
             { name: "Время разработки:", value: "3 месяца" },
-            { name: "Платформа:", value: "Wordpress" },
             { name: "Год проекта:", value: "2023" }
         ],
         info: [

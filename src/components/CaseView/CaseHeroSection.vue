@@ -10,6 +10,12 @@ import cases from '@/constants/cases-data'
 const route = useRoute();
 const slug = computed(() => route.params.slug);
 const casesList = ref(cases);
+const filterNames = ref({
+      website: "разработка веб-сайта",
+      target: "таргет",
+      marketing: "маркетинг",
+      bot: "разработка бота"
+    });
 const currentCase = computed(() =>
     casesList.value.find(caseItem => caseItem.id === slug.value) || null
 );
@@ -37,7 +43,7 @@ const currentCase = computed(() =>
                             class="hero-section_info-stats-value">{{ item.name }}</span>
                     </div>
                     <div>
-                        <span class="hero-section_info-stats-name">Таргет</span>
+                        <span class="hero-section_info-stats-name">{{ filterNames[currentCase.service] }}</span>
                         <span v-for="(item, index) in currentCase.statistic" :key="index"
                             class="hero-section_info-stats-name">{{ item.value }}</span>
                     </div>

@@ -25,17 +25,17 @@ const handleSubmit = () => {
             вашего проекта, и мы ответим в тот же день</p>
         <div class="contacts-section_icons">
             <div class="contacts-section_icons-item">
-                <img src="@/assets/images/projects_icon.png" alt="projects_icon">
+                <img src="@/assets/images/contact-location.png" alt="projects_icon">
                 <span class="contacts-section_icons-item-name">Адресс</span>
                 <span class="contacts-section_icons-item-count">г. Ереван 2-й переулок улицы Вардананц, 8</span>
             </div>
             <div class="contacts-section_icons-item">
-                <img src="@/assets/images/projects_icon.png" alt="projects_icon">
+                <img src="@/assets/images/contact-phone.png" alt="projects_icon">
                 <span class="contacts-section_icons-item-name">Телефон</span>
                 <span class="contacts-section_icons-item-count">+37455955818</span>
             </div>
             <div class="contacts-section_icons-item">
-                <img src="@/assets/images/projects_icon.png" alt="projects_icon">
+                <img src="@/assets/images/contact-email.png" alt="projects_icon">
                 <span class="contacts-section_icons-item-name">Email</span>
                 <span class="contacts-section_icons-item-count">sales.sinepgroup@gmail.com</span>
             </div>

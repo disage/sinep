@@ -7,6 +7,7 @@ import ServiceHeroSection from '@/components/ServiceView/ServiceHeroSection.vue'
 import ServiceTypesSection from '@/components/ServiceView/ServiceTypesSection.vue';
 import ServiceStepsSection from '@/components/ServiceView/ServiceStepsSection.vue';
 import CasesSection from '@/components/HomeView/CasesSection.vue';
+import OrderBanner from '@/components/CaseView/OrderBanner.vue';
 
 const route = useRoute();
 const slug = computed(() => route.params.slug);
@@ -21,6 +22,8 @@ const slug = computed(() => route.params.slug);
         <ServiceStepsSection data-section="stepsSection" />
         <Divider />
         <CasesSection data-section="casesSection"/>
+        <Divider />
+        <OrderBanner :service="slug"/>
         <Divider />
     </main>
 </template>
