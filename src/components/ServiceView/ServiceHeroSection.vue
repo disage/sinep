@@ -61,7 +61,7 @@ const scrollTo = (sectionName) => {
                     <Button v-if="slug === 'website'" @click="scrollTo('serviceTypesSection')">Виды</Button>
                     <Button @click="scrollTo('stepsSection')">Этапы</Button>
                     <Button @click="scrollTo('casesSection')">Кейсы</Button>
-                    <Button @click="scrollTo('briefSection')">Бриф</Button>
+                    <Button @click="scrollTo('orderBanner')">Бриф</Button>
                 </div>
             </div>
             <div class="hero-section_logo">
@@ -102,7 +102,7 @@ const scrollTo = (sectionName) => {
                 display: flex;
                 transform: translateX(-1000px);
                 animation: popUpRight 0.5s forwards;
-                animation-delay: 1.8s;
+                animation-delay: 0.8s;
             }
         }
 
@@ -119,7 +119,7 @@ const scrollTo = (sectionName) => {
             z-index: 3;
             opacity: 0;
             animation: fadeIn 0.5s forwards;
-            animation-delay: 2.4s;
+            animation-delay: 1.4s;
         }
     }
 
@@ -144,7 +144,7 @@ const scrollTo = (sectionName) => {
         color: #EEEAE6;
         text-shadow: 5px 5px 15px #000000;
         animation: popUpTop 1s forwards;
-        animation-delay: 1s;
+        /*animation-delay: 1s;*/
         margin: 0;
         transform: translateY(130px);
     }

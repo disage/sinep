@@ -87,7 +87,7 @@ const currentCase = computed(() =>
                 display: flex;
                 transform: translateX(-1000px);
                 animation: popUpRight 0.5s forwards;
-                animation-delay: 1.8s;
+                animation-delay: 0.8s;
             }
         }
 
@@ -112,23 +112,23 @@ const currentCase = computed(() =>
                 animation: fadeIn 0.5s forwards;
 
                 &:nth-of-type(1) {
-                    animation-delay: 2s;
+                    animation-delay: 1s;
                 }
 
                 &:nth-of-type(2) {
-                    animation-delay: 2.2s;
+                    animation-delay: 1.2s;
                 }
 
                 &:nth-of-type(3) {
-                    animation-delay: 2.4s;
+                    animation-delay: 1.4s;
                 }
 
                 &:nth-of-type(4) {
-                    animation-delay: 2.6s;
+                    animation-delay: 1.6s;
                 }
 
                 &:nth-of-type(5) {
-                    animation-delay: 2.8s;
+                    animation-delay: 1.8s;
                 }
             }
 
@@ -140,23 +140,23 @@ const currentCase = computed(() =>
                 animation: fadeIn 0.5s forwards;
 
                 &:nth-of-type(1) {
-                    animation-delay: 2s;
+                    animation-delay: 1s;
                 }
 
                 &:nth-of-type(2) {
-                    animation-delay: 2.2s;
+                    animation-delay: 1.2s;
                 }
 
                 &:nth-of-type(3) {
-                    animation-delay: 2.4s;
+                    animation-delay: 1.4s;
                 }
 
                 &:nth-of-type(4) {
-                    animation-delay: 2.6s;
+                    animation-delay: 1.6s;
                 }
 
                 &:nth-of-type(5) {
-                    animation-delay: 2.8s;
+                    animation-delay: 1.8s;
                 }
             }
         }
@@ -199,15 +199,15 @@ const currentCase = computed(() =>
         color: #EEEAE6;
         text-shadow: 5px 5px 15px #000000;
         animation: popUpTop 1s forwards;
-        animation-delay: 1s;
+        /*animation-delay: 1s;*/
         margin: 0;
-        transform: translateY(130px);
+        transform: translateY(200px);
     }
 }
 
 @keyframes popUpTop {
     0% {
-        transform: translateY(130px);
+        transform: translateY(200px);
     }
 
     100% {

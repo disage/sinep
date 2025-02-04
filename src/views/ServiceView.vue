@@ -23,7 +23,7 @@ const slug = computed(() => route.params.slug);
         <Divider />
         <CasesSection data-section="casesSection"/>
         <Divider />
-        <OrderBanner :service="slug"/>
+        <OrderBanner :service="slug" data-section="orderBanner"/>
         <Divider />
     </main>
 </template>

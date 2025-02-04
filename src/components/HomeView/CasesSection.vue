@@ -11,9 +11,9 @@
       </div>
       <div class="case-section__grid">
         <div v-for="caseItem in filteredCases" :key="caseItem.id" class="case-card" @click="goToCase(caseItem.id)">
-          <img :src="caseItem.images[0].path" :alt="caseItem.name" class="case-card__image" />
+          <img v-if="caseItem.images[0]" :src="caseItem.images[0].path" :alt="caseItem.name" class="case-card__image" />
+          <img v-else src="@/assets/images/hero_logo.png" :alt="caseItem.name" class="case-card__image" />
           <h3 class="case-card__title">{{ caseItem.name }}</h3>
-          <p class="case-card__description">{{ caseItem.description }}</p>
         </div>
       </div>
     </div>
@@ -126,8 +126,7 @@ export default {
   }
 
   &__image {
-    width: 100%;
-    height: auto;
+    height: 240px;
     border-radius: 10px;
     margin-bottom: 15px;
   }
@@ -138,11 +137,6 @@ export default {
     color: #333;
     margin-bottom: 10px;
     font-weight: 600;
-  }
-
-  &__description {
-    font-size: 1rem;
-    color: #666;
   }
 }
 </style>

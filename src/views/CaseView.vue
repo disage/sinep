@@ -7,6 +7,7 @@ import CaseHeroSection from '@/components/CaseView/CaseHeroSection.vue';
 import cases from '@/constants/cases-data'
 import Divider from '@/components/Divider.vue';
 import OrderBanner from '@/components/CaseView/OrderBanner.vue';
+import ImageModal from '@/components/ImageModal.vue';
 
 
 const route = useRoute();
@@ -15,6 +16,21 @@ const casesList = ref(cases);
 const currentCase = computed(() =>
     casesList.value.find(caseItem => caseItem.id === slug.value) || null
 );
+// const openImageInNewTab = (path) => {
+//   window.open(path, '_blank');
+// };
+const isModalVisible = ref(false);
+const selectedImage = ref(null);
+
+const openModal = (image) => {
+  selectedImage.value = image;
+  isModalVisible.value = true;
+};
+
+const closeModal = () => {
+  isModalVisible.value = false;
+  selectedImage.value = null;
+};
 
 </script>
 <template>
@@ -24,9 +40,9 @@ const currentCase = computed(() =>
         <h2>Описание</h2>
         <Accordion :items="currentCase.info" />
         <Divider />
-        <div class="image-section">
+        <div v-if="currentCase.images" class="image-section">
             <div class="image-section__images-grid">
-                <div v-for="(image, index) in currentCase.images" :key="index" class="image-card">
+                <div v-for="(image, index) in currentCase.images" :key="index" class="image-card" @click="openModal(image)">
                 <img :src="image.path" alt="project image" class="image-card__image" />
                 <h3 class="image-card__title">{{ image.title }}</h3>
                 </div>
@@ -35,6 +51,12 @@ const currentCase = computed(() =>
         <Divider />
         <OrderBanner :service="currentCase.service"/>
         <Divider />
+        <ImageModal 
+            v-if="isModalVisible" 
+            :image="{ src: selectedImage.path }" 
+            :isVisible="isModalVisible"
+            @close="closeModal" 
+        />
     </main>
 </template>
 <style lang="scss" scoped>

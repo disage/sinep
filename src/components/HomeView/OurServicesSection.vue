@@ -2,12 +2,12 @@
 import { useRouter } from 'vue-router';
 import Button from '../Button.vue';
 const services = [
-  { slug: 'target', name: 'Таргет', duration: 'от 1 месяца' },
+  { slug: 'target', name: 'Настройка таргета', duration: 'от 1 месяца' },
   { slug: 'website', name: 'Разработка сайта', duration: 'от 2-х недель' },
   { slug: 'marketing', name: 'Маркетинговое сопровождение', duration: 'от 1 месяца' },
-  { slug: 'bot', name: 'Разработка ботов', duration: 'от 2-х недель' },
-  { slug: 'explainer', name: 'Создание эксплейнеров', duration: 'от 1 месяца' },
-  { slug: 'get-course', name: 'Создание гет курсов', duration: 'от 2-х недель' },
+  { slug: 'bot', name: 'Разработка бота', duration: 'от 2-х недель' },
+  { slug: 'explainer', name: 'Создание эксплейнера', duration: 'от 1 месяца' },
+  { slug: 'get-course', name: 'Разработка GetCourse платформы', duration: 'от 2-х недель' },
 ];
 const router = useRouter();
 

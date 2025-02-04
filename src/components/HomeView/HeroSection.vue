@@ -74,7 +74,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 display: flex;
                 transform: translateX(-1000px);
                 animation: popUpRight 0.5s forwards;
-                animation-delay: 1.8s;
+                animation-delay: 0.8s;
             }
         }
 
@@ -99,15 +99,15 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 animation: fadeIn 0.5s forwards;
 
                 &:nth-of-type(1) {
-                    animation-delay: 2s;
+                    animation-delay: 1s;
                 }
 
                 &:nth-of-type(2) {
-                    animation-delay: 2.2s;
+                    animation-delay: 1.2s;
                 }
 
                 &:nth-of-type(3) {
-                    animation-delay: 2.4s;
+                    animation-delay: 1.4s;
                 }
             }
 
@@ -119,15 +119,15 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 animation: fadeIn 0.5s forwards;
 
                 &:nth-of-type(1) {
-                    animation-delay: 2s;
+                    animation-delay: 1s;
                 }
 
                 &:nth-of-type(2) {
-                    animation-delay: 2.2s;
+                    animation-delay: 1.2s;
                 }
 
                 &:nth-of-type(3) {
-                    animation-delay: 2.4s;
+                    animation-delay: 1.4s;
                 }
             }
         }
@@ -154,7 +154,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
         color: #EEEAE6;
         text-shadow: 5px 5px 15px #000000;
         animation: popUpTop 1s forwards;
-        animation-delay: 1s;
+        /*animation-delay: 1s;*/
         margin: 0;
         transform: translateY(130px);
     }
@@ -250,7 +250,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
 
 @media screen and (max-width: 620px) {
     h2 {
-        font-size: 36px !important;
+        font-size: 35px !important;
     }
 
     span {
