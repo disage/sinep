@@ -37,7 +37,7 @@ const goToHome = () => {
             <li @click="scrollTo('aboutSection')" class="header__link">Про нас</li>
             <li @click="scrollTo('servicesSection')" class="header__link">Услуги</li>
             <li @click="scrollTo('casesSection')" class="header__link">Кейсы</li>
-            <li class="header__link">Отзывы</li>
+            <li class="header__link" @click="scrollTo('feedbackSection')">Отзывы</li>
             <li @click="scrollTo('contactsSection')" class="header__link">Контакты</li>
           </ul>
         </nav>

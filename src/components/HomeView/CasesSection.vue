@@ -127,6 +127,7 @@ export default {
 
   &__image {
     height: 240px;
+    max-width: 100%;
     border-radius: 10px;
     margin-bottom: 15px;
   }
@@ -137,6 +138,13 @@ export default {
     color: #333;
     margin-bottom: 10px;
     font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 620px) {
+
+  .case-section {
+    padding: 20px;
   }
 }
 </style>

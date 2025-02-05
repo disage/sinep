@@ -24,12 +24,12 @@ const bannerContent = {
     marketing: {
         title: "Надоел примитивный маркетинг ? ",
         description: "Мы возьмём на себя продвижение вашего бизнеса: настроим бюджет на рекламу, создадим качественный контент и обеспечим постоянный рост с помощью аналитики и оптимизации — заполняйте бриф, и мы свяжемся с вами!",
-        briefLink: "https://docs.google.com/forms/d/1T0XMWAKDO7JgmAKF8x9FVtDK_OhX7hCrqYf2J6dEdIU/"
+        briefLink: "https://docs.google.com/forms/d/1ZfkKFwKwX4w8T3gGA9uCCMnOxLu7FLx15Ml8g1IWyJM"
     },
     website: {
         title: "Хотите обогнать конкурентов и иметь больше клиентов? Закажите сайт, который продаёт на автомате!",
         description: "Мы создадим для Вас известный онлайн-инструмент, который будет привлекать клиентов и заставит их покупать. Заполняйте бриф и начинаем уже сегодня!",
-        briefLink: "https://docs.google.com/forms/d/1T0XMWAKDO7JgmAKF8x9FVtDK_OhX7hCrqYf2J6dEdIU/"
+        briefLink: "https://docs.google.com/forms/d/e/1FAIpQLSeOfLkeHZS2lqGpedM9lTazmQ5Q3MJwuYxPCzhvaPfrxt6rSw/viewform?usp=header"
     },
     explainer: {
         title: "Как просто и эффективно объяснить? Создадим эксплейнеры, которые увлекают и обучают!",

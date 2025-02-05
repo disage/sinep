@@ -6,9 +6,9 @@ import WhyWeSection from '../components/HomeView/WhyWeSection.vue'
 import OurServicesSection from '@/components/HomeView/OurServicesSection.vue'
 import CasesSection from '@/components/HomeView/CasesSection.vue'
 import ContactsSection from '@/components/HomeView/ContactsSection.vue'
-import Footer from '@/components/Footer.vue'
 
 import Divider from '../components/Divider.vue'
+import FeedbackSection from '@/components/HomeView/FeedbackSection.vue'
 </script>
 
 <template>
@@ -24,6 +24,9 @@ import Divider from '../components/Divider.vue'
     <OurServicesSection data-section="servicesSection" ref="servicesSection" id="servicesSection" />
     <Divider />
     <CasesSection data-section="casesSection" ref="casesSection" id="casesSection" />
+    <Divider />
+    <FeedbackSection data-section="feedbackSection" id="feedbackSection" ref="feedbackSection">
+    </FeedbackSection>
     <Divider />
     <ContactsSection data-section="contactsSection" ref="contactsSection" id="contactsSection" />
     <Divider />

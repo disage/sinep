@@ -53,6 +53,6 @@
   
   .modal-image {
     max-width: 90%;
-    max-height: 90%;
+    max-height: 90vh;
   }
   </style>

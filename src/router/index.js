@@ -35,9 +35,9 @@ const router = createRouter({
     
   ],
   scrollBehavior(to, from, savedPosition) {
-    if (savedPosition) {
-      return savedPosition; // Сохраненная позиция при возврате
-    }
+    // if (savedPosition) {
+    //   return savedPosition; // Сохраненная позиция при возврате
+    // }
     if (to.hash) {
       // Используем setTimeout для задержки прокрутки
       setTimeout(() => {

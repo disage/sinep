@@ -6,8 +6,8 @@ const services = [
   { slug: 'website', name: 'Разработка сайта', duration: 'от 2-х недель' },
   { slug: 'marketing', name: 'Маркетинговое сопровождение', duration: 'от 1 месяца' },
   { slug: 'bot', name: 'Разработка бота', duration: 'от 2-х недель' },
-  { slug: 'explainer', name: 'Создание эксплейнера', duration: 'от 1 месяца' },
-  { slug: 'get-course', name: 'Разработка GetCourse платформы', duration: 'от 2-х недель' },
+  // { slug: 'explainer', name: 'Создание эксплейнера', duration: 'от 1 месяца' },
+  // { slug: 'get-course', name: 'Разработка GetCourse платформы', duration: 'от 2-х недель' },
 ];
 const router = useRouter();
 
