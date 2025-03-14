@@ -32,6 +32,7 @@ defineProps({
 
   img {
     max-height: 400px;
+    max-width: 100%;
     width: auto;
   }
   p {

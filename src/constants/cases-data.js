@@ -113,7 +113,7 @@ const cases = [
         name: "Ремонт и строительство",
         description: "Настройка таргетированная рекламы для компании по ремонту и строительству",
         images: [
-            {path: new URL('@/assets/images/cases/case5_1.JPG', import.meta.url).href, title: "Креатив"},
+            {path: new URL('@/assets/images/cases/case6_1.PNG', import.meta.url).href, title: "Креатив"},
         ],        
         statistic: [
             { name: "Ниша:", value: "строительство" },

@@ -32,7 +32,7 @@ const scrollTo = (sectionName) => {
                 <li @click="scrollTo('aboutSection')">О нас</li>
                 <li @click="scrollTo('servicesSection')">Услуги</li>
                 <li @click="scrollTo('casesSection')">Кейсы</li>
-                <li @click="scrollTo('contactsSection')">Отзывы</li>
+                <li @click="scrollTo('feedbackSection')">Отзывы</li>
                 <li @click="scrollTo('contactsSection')">Контакты</li>
             </ul>
         </div>

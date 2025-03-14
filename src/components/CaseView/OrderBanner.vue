@@ -14,7 +14,7 @@ const bannerContent = {
     target: {
         title: "Хотите привлечь новых клиентов и увеличить прибыль?",
         description: "Обращайтесь к нам — мы настроим таргетированную рекламу, которая работает на результат",
-        briefLink: "https://docs.google.com/forms/d/e/1FAIpQLSenNBvMym_j_WDjXTNu6OXcEdMzRgyoZE6k2Q6HxdvKJ4h2Dg/viewform"
+        briefLink: "https://docs.google.com/forms/d/1sOJiIl5Vjd53uWX_syqy6lNWFkKGonPVreDNPrkCi_o/viewform"
     },
     bot: {
         title: "Хотите всегда иметь под рукой надежного помощника?",
@@ -24,7 +24,7 @@ const bannerContent = {
     marketing: {
         title: "Надоел примитивный маркетинг ? ",
         description: "Мы возьмём на себя продвижение вашего бизнеса: настроим бюджет на рекламу, создадим качественный контент и обеспечим постоянный рост с помощью аналитики и оптимизации — заполняйте бриф, и мы свяжемся с вами!",
-        briefLink: "https://docs.google.com/forms/d/1ZfkKFwKwX4w8T3gGA9uCCMnOxLu7FLx15Ml8g1IWyJM"
+        briefLink: "https://forms.gle/d7ZTaMSw3s5tUYsT6"
     },
     website: {
         title: "Хотите обогнать конкурентов и иметь больше клиентов? Закажите сайт, который продаёт на автомате!",

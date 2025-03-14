@@ -6,34 +6,49 @@ const name = ref('');
 const email = ref('');
 const phone = ref('');
 const message = ref('');
+const responseMessage = ref(''); // Переменная для уведомлений
 
-// const handleSubmit = () => {
-//     console.log('Форма отправлена', { name: name.value, email: email.value, phone: phone.value, message: message.value });
-// };
 const handleSubmit = async () => {
-      const payload = {
-        name: name.value,
-        email: email.value,
-        phone: phone.value,
-        message: message.value
-      };
+  const payload = {
+    name: name.value,
+    email: email.value,
+    phone: phone.value,
+    message: message.value
+  };
 
-      try {
-        const response = await fetch('http://127.0.0.1:5000/send_email', {
-          method: 'POST',
-          mode: 'cors',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify(payload)
-        });
-        const data = await response.json();
-        this.responseMessage = data.message;
-      } catch (error) {
-        console.error('Ошибка при отправке сообщения:', error);
-        this.responseMessage = 'Ошибка при отправке сообщения.';
-      }
+  try {
+    const response = await fetch('https://api.sinep-digital.com/send_email', {
+    // const response = await fetch('https://185.25.116.193:5000/send_email', {
+    // const response = await fetch('http://127.0.0.1:5000/send_email', {
+      method: 'POST',
+      mode: 'cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    const data = await response.json();
+
+    // Проверяем статус ответа от сервера
+    if (response.ok) {
+      responseMessage.value = data.message; // Успех
+      // Обнуляем значения в форме
+      name.value = '';
+      email.value = '';
+      phone.value = '';
+      message.value = '';
+    } else {
+      responseMessage.value = data.message || 'Ошибка при отправке сообщения.'; // Ошибка
     }
+  } catch (error) {
+    console.error('Ошибка при отправке сообщения:', error);
+    responseMessage.value = 'Ошибка при отправке сообщения.'; // Сообщение об ошибке
+  }
+  setTimeout(() => {
+      responseMessage.value = '';
+    }, 5000)
+}
 </script>
 <template>
     <section class="contacts-section">
@@ -67,26 +82,40 @@ const handleSubmit = async () => {
         <div class="form-container">
             <form @submit.prevent="handleSubmit">
                 <div class="form-field">
-                    <input v-model="name" type="text" placeholder="Имя" />
+                    <input v-model="name" type="text" placeholder="Имя" required/>
                 </div>
                 <div class="form-field">
-                    <input v-model="email" type="email" placeholder="E-mail" />
+                    <input v-model="email" type="email" placeholder="E-mail" required />
                 </div>
                 <div class="form-field">
                     <input v-model="phone" type="tel" placeholder="Телефон" />
                 </div>
                 <div class="form-field">
-                    <textarea v-model="message" placeholder="Сообщение"></textarea>
+                    <textarea v-model="message" placeholder="Сообщение" required></textarea>
                 </div>
                 <div class="form-button">
                     <Button>Отправить</Button>
                 </div>
             </form>
+            <div v-if="responseMessage" class="notification">{{ responseMessage }}</div>
         </div>
     </section>
 </template>
 
 <style lang="scss" scoped>
+.notification {
+    z-index: 999;
+    position: fixed;
+    padding: 10px;
+    top: 100px;
+    border: 1px solid;
+    border-radius: 5px;
+    background-color: #EEEAE6;
+    color: #1B1B1C;
+    box-shadow: -5px 5px 10px rgba(19, 19, 20, 0.2), 5px -5px 10px rgba(19, 19, 20, 0.2), -5px -5px 10px rgba(35, 35, 36, 0.9), 5px 5px 13px rgba(19, 19, 20, 0.9), inset 1px 1px 2px rgba(35, 35, 36, 0.3), inset -1px -1px 2px rgba(19, 19, 20, 0.5);
+
+  }
+  
 .contacts-section {
     display: flex;
     flex-direction: column;

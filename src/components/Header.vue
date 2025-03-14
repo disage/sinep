@@ -12,6 +12,7 @@ const toggleMenu = () => {
 
 const scrollTo = (sectionName) => {
   const currentRoute = router.currentRoute.value;
+  isMenuOpen.value = false;
 
   if (currentRoute.name !== 'home') {
     router.push({ name: 'home', hash: `#${sectionName}` });
@@ -57,6 +58,13 @@ const goToHome = () => {
             <span class="hamburger__line" :class="{ 'hamburger__line--middle': isMenuOpen }"></span>
             <span class="hamburger__line" :class="{ 'hamburger__line--bottom': isMenuOpen }"></span>
           </button>
+          <ul v-if="isMenuOpen" class="dropdown__menu-opened">
+            <li @click="scrollTo('aboutSection')" class="dropdown__item">Про нас</li>
+            <li @click="scrollTo('servicesSection')" class="dropdown__item">Услуги</li>
+            <li @click="scrollTo('casesSection')" class="dropdown__item">Кейсы</li>
+            <li class="dropdown__item" @click="scrollTo('feedbackSection')">Отзывы</li>
+            <li @click="scrollTo('contactsSection')" class="dropdown__item">Контакты</li>
+          </ul>
         </div>
       </div>
     </div>
@@ -171,6 +179,26 @@ $text-color: #EEEAE6;
       border-radius: 8px;
       box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
       display: none;
+      position: relative;
+
+      .dropdown__menu-opened {
+        display: block;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: $background-color;
+        box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4), -4px -4px 8px rgba(255, 255, 255, 0.1);
+        border-radius: 8px;
+        list-style: none;
+        margin: 0;
+        padding: 0.5rem 0;
+
+        .dropdown__item {
+          padding: 0.5rem 1rem;
+          color: $text-color;
+          cursor: pointer;
+        }
+      }
     }
 
     .hamburger {

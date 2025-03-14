@@ -25,14 +25,14 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
                 </div>
                 <div class="hero-section_info-stats">
                     <div>
-                        <span class="hero-section_info-stats-value">150k $</span>
-                        <span class="hero-section_info-stats-value">12+</span>
-                        <span class="hero-section_info-stats-value">80+</span>
-                    </div>
-                    <div>
                         <span class="hero-section_info-stats-name">Заработано клиентам</span>
                         <span class="hero-section_info-stats-name">Крупных проектов</span>
                         <span class="hero-section_info-stats-name">Охваченных ниш</span>
+                    </div>
+                    <div>
+                        <span class="hero-section_info-stats-value">150k $</span>
+                        <span class="hero-section_info-stats-value">12+</span>
+                        <span class="hero-section_info-stats-value">80+</span>
                     </div>
                 </div>
             </div>
@@ -93,7 +93,6 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
             &-value {
                 opacity: 0;
                 margin-bottom: 10px;
-                margin-right: 50px;
                 color: #CAA153;
                 font-weight: 600;
                 animation: fadeIn 0.5s forwards;
@@ -112,6 +111,7 @@ import circleElementLogo from '@/assets/images/circleElementLogo.vue';
             }
 
             &-name {
+                margin-right: 50px;
                 opacity: 0;
                 margin-bottom: 10px;
                 font-weight: 300;
